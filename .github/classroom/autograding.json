@@ -1,0 +1,34 @@
+{
+  "tests": [
+    {
+      "name": "Test 1 - Example Interaction",
+      "setup": "javac src/VectorOperations.java",
+      "run": "java -cp src VectorOperations",
+      "input": "1 Alice\n1 Bob\n2 Charlie 2\n4\n3 Bob\n4\n5",
+      "output": "Added\\s*Added\\s*Inserted\\s*\\[Alice, Charlie, Bob\\]\\s*Removed\\s*\\[Alice, Charlie\\]",
+      "comparison": "regex",
+      "timeout": 10,
+      "points": 40
+    },
+    {
+      "name": "Test 2 - Insert at beginning and end",
+      "setup": "javac src/VectorOperations.java",
+      "run": "java -cp src VectorOperations",
+      "input": "1 X\n2 Y 1\n2 Z 3\n4\n5",
+      "output": "Added\\s*Inserted\\s*Inserted\\s*\\[Y, X, Z\\]",
+      "comparison": "regex",
+      "timeout": 10,
+      "points": 30
+    },
+    {
+      "name": "Test 3 - Add, Remove Multiple, Display",
+      "setup": "javac src/VectorOperations.java",
+      "run": "java -cp src VectorOperations",
+      "input": "1 John\n1 Doe\n1 Jane\n3 Doe\n4\n5",
+      "output": "Added\\s*Added\\s*Added\\s*Removed\\s*\\[John, Jane\\]",
+      "comparison": "regex",
+      "timeout": 10,
+      "points": 30
+    }
+  ]
+}
